@@ -1,0 +1,17 @@
+ $("#submit-btn").on("click", function(){
+      alert("yer a wizard");
+      event.preventDefault();
+      var apiKey = "";
+      var searchTerm = $("#searchTerm").val().trim();
+      var queryURL = "";
+      var numOfPlayers = parseInt($("#numOfPlayers").val());
+      var searchResults = [];
+
+      $.ajax({
+        url: queryURL,
+        method: "GET"
+      }).then(function(searchResponse) 
+
+
+      });
+    });

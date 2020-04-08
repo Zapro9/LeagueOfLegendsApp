@@ -22,3 +22,46 @@
 		display: none;
 	}
 }
+
+.navbar-item {
+    display: flex;
+  }
+  
+  .navbar,
+  .navbar-menu,
+  .navbar-start,
+  .navbar-end {
+    align-items: stretch;
+    display: flex;
+    padding: 0;
+  }
+  
+  .navbar-menu{
+    flex-grow: 1;
+    flex-shrink: 0;
+  }
+  .navbar-start{
+    justify-content: flex-start;
+    margin-right: auto;
+  }
+  .navbar-end{
+    justify-content: flex-end;
+    margin-left: auto;
+  }
+.field {
+    justify-content: center;
+    width: 400px;
+    margin: 0 auto;
+}
+.container {
+    width: 500px;
+    margin: 0 auto;
+}
+
+.hero-body {
+    margin: 50px;
+}
+
+/* .card {
+    style visibility: hidden;
+} */
