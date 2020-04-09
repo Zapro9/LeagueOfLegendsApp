@@ -1,1 +1,0 @@
-useInput.split(" joined the lobby").map(name => name.replace("\n", ""));

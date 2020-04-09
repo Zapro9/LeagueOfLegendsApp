@@ -1,4 +1,7 @@
-//search.addEventListener("click", setInput);
+$(".navbar-item").on("click", function () {
+  var href = $(this).attr("data-href");
+  location.href = href;
+});
 var userInput = ``;
 $("#search").on("click", setInput);
 function setInput() {
