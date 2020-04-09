@@ -1,3 +1,6 @@
+$("#burger").on("click", function (event) {
+  $(".ul-container").toggle();
+});
 $(".navbar-item").on("click", function () {
   var href = $(this).attr("data-href");
   location.href = href;
