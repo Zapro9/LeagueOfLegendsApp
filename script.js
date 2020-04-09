@@ -26,11 +26,11 @@ function setInput() {
         method: "GET",
       }).then(function (sumStats) {
         var finalStats = sumStats[0];
-
+        console.log(i);
         var statDiv = $(`#player${count}Stats`);
-        var tierDiv = $("<div>" + finalStats.tier + "</div>");
-        statDiv.append(tierDiv);
-
+        console.log(statDiv);
+        var newStatDiv = $("<div>" + finalStats.tier + "</div>");
+        statDiv.append(newStatDiv);
         console.log(finalStats);
 
         count = count + 1;
