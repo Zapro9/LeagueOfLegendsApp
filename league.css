@@ -7,6 +7,38 @@
 .center-column {
     flex-direction: column;
 }
+
+@media (max-width: 960px) {
+  .desktop {
+    display: none;
+  }
+}
+@media (min-width: 960px) {
+  #burger{display: none;}
+}
+
+.column {
+  float: left;
+  width: 50%;
+  text-align: center;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.ul-container {
+  position: absolute;
+  background-color: rgb(90, 90, 90);
+  padding: 8px;
+  right: 40px;
+  top: 30px;
+  display: none;
+  z-index: 9000;
+}
 ​
 .top    { align-items:     flex-start; }
 .right  { justify-content: flex-end;   }
@@ -23,9 +55,12 @@
 		display: none;
 	} */
 }
+.navbar-image {
+  width: 50px;
+}
 ​
 .navbar-item {
-    display: flex;
+    display: right;
   }
   
   .navbar,
