@@ -117,10 +117,16 @@ a:hover {
   margin: 50px;
 }
 .playerStats {
-  background-color: whitesmoke;
   width: 23%;
   float: left;
-}
-.player1Stats {
-  float: left;
+  padding: 30px;
+  margin: 45px;
+  background: rgb(182, 174, 238);
+  background: radial-gradient(
+    circle,
+    rgba(182, 174, 238, 1) 0%,
+    rgba(172, 168, 216, 0.984) 100%
+  );
+  outline: 2px solid black;
+  color: black;
 }
