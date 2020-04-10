@@ -20,22 +20,42 @@ function setInput() {
       method: "GET",
     }).then(function (response) {
       var stats = `http://cors-anywhere.herokuapp.com/https://na1.api.riotgames.com/lol/league/v4/entries/by-summoner/${response.id}?api_key=RGAPI-6b44e200-9831-4e0d-969d-833d6a11ba8b`;
-      console.log(response);
       $.ajax({
         url: stats,
         method: "GET",
       }).then(function (sumStats) {
         var finalStats = sumStats[0];
-        console.log(i);
         var statDiv = $(`#player${count}Stats`);
-        console.log(statDiv);
-        var newStatDiv = $("<div>" + finalStats.tier + "</div>");
-        statDiv.append(newStatDiv);
-        console.log(finalStats);
+        //
+        var nameStat = $(
+          "<div>" + "Name: " + finalStats.summonerName + "</div>"
+        );
+        statDiv.append(nameStat);
+        //
+        var rankStat = $(
+          "<div>" +
+            "Rank: " +
+            finalStats.tier +
+            " " +
+            finalStats.rank +
+            "</div>"
+        );
+        statDiv.append(rankStat);
+        //
+        var winStat = $("<div>" + "Wins: " + finalStats.wins + "</div>");
+        statDiv.append(winStat);
+        //
+        var lossStat = $("<div>" + "Losses: " + finalStats.losses + "</div>");
+        statDiv.append(lossStat);
+        //
+        var wlRatio = (finalStats.wins / finalStats.losses).toFixed(2);
+        var wlStat = $("<div>" + "W/L Ratio: " + wlRatio + "</div>");
+        statDiv.append(wlStat);
+        //
 
+        console.log(finalStats);
         count = count + 1;
       });
     });
   }
 }
-// use variable [i] to target a player and select the correct div
