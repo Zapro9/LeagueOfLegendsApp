@@ -10,6 +10,7 @@ $("#search").on("click", function () {
   console.log($(".playerStats"), "hello");
 });
 var userInput = ``;
+
 $("#search").on("click", setInput);
 function setInput() {
   userInput = $("#summText").val().trim();
