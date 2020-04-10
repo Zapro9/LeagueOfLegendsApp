@@ -1,11 +1,15 @@
-.center, .center-column, .top, .right, .bottom, .left {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+.center,
+.center-column,
+.top,
+.right,
+.bottom,
+.left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-​
-.center-column {
-    flex-direction: column;
+​ .center-column {
+  flex-direction: column;
 }
 
 @media (max-width: 960px) {
@@ -14,7 +18,9 @@
   }
 }
 @media (min-width: 960px) {
-  #burger{display: none;}
+  #burger {
+    display: none;
+  }
 }
 
 .column {
@@ -39,61 +45,73 @@
   display: none;
   z-index: 9000;
 }
-​
-.top    { align-items:     flex-start; }
-.right  { justify-content: flex-end;   }
-.bottom { align-items:     flex-end;   }
-.left   { justify-content: flex-start; }
-​
-.single-spaced, .single-spaced * {
-    line-height: 1;
+​ .top {
+  align-items: flex-start;
 }
-​
-.hero {
-    max-width: 1024px;
-	/* .desktop {
+.right {
+  justify-content: flex-end;
+}
+.bottom {
+  align-items: flex-end;
+}
+.left {
+  justify-content: flex-start;
+}
+​ .single-spaced,
+.single-spaced * {
+  line-height: 1;
+}
+​ .hero {
+  max-width: 1024px;
+  /* .desktop {
 		display: none;
 	} */
 }
 .navbar-image {
   width: 50px;
 }
-​
-.navbar-item {
-    display: right;
-  }
-  
-  .navbar,
-  .navbar-menu,
-  .navbar-start,
-  .navbar-end {
-    align-items: stretch;
-    display: flex;
-    padding: 0;
-  }
-  
-  .navbar-menu{
-    flex-grow: 1;
-    flex-shrink: 0;
-  }
-  .navbar-start{
-    justify-content: flex-start;
-    margin-right: auto;
-  }
-  .navbar-end{
-    justify-content: flex-end;
-    margin-left: auto;
-  }
+​ .navbar-item {
+  display: right;
+}
+
+.navbar,
+.navbar-menu,
+.navbar-start,
+.navbar-end {
+  align-items: stretch;
+  display: flex;
+  padding: 0;
+}
+
+.navbar-menu {
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+.navbar-start {
+  justify-content: flex-start;
+  margin-right: auto;
+}
+.navbar-end {
+  justify-content: flex-end;
+  margin-left: auto;
+}
 .field {
-    justify-content: center;
-    width: 400px;
-    margin: 0 auto;
+  justify-content: center;
+  width: 400px;
+  margin: 0 auto;
 }
 .container {
-    width: 500px;
-    margin: 0 auto;
+  width: 500px;
+  margin: 0 auto;
 }
-​
-.hero-body {
-    margin: 50px;
+​ .hero-body {
+  margin: 50px;
+}
+.playerStats {
+  background-color: whitesmoke;
+  width: 23%;
+  float: left;
+}
+.player1Stats {
+  float: left;
 }
