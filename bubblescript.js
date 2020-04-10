@@ -10,7 +10,7 @@ var lossesArr = [];
 
 //click event 
 $("#bubbleButton").click(function(){
-  // event.preventDefault();
+  event.preventDefault();
   userInput = $("#summText").val().trim();
   var sumNames = userInput
     .split(" joined the lobby")
@@ -18,10 +18,10 @@ $("#bubbleButton").click(function(){
 
   for (i = 0; i < 5; i++) {
     $.ajax({
-      url: "http://cors-anywhere.herokuapp.com/https://na1.api.riotgames.com/lol/summoner/v4/summoners/by-name/" + sumNames[i] + "?api_key=RGAPI-6b44e200-9831-4e0d-969d-833d6a11ba8b",
-      method: "GET"
-    }).then(function(response) {
-      var stats = "http://cors-anywhere.herokuapp.com/https://na1.api.riotgames.com/lol/league/v4/entries/by-summoner/" + response.id + "?api_key=RGAPI-6b44e200-9831-4e0d-969d-833d6a11ba8b";
+      url: `http://cors-anywhere.herokuapp.com/https://na1.api.riotgames.com/lol/summoner/v4/summoners/by-name/${sumNames[i]}?api_key=RGAPI-6b44e200-9831-4e0d-969d-833d6a11ba8b`,
+      method: "GET",
+    }).then(function (response) {
+      var stats = `http://cors-anywhere.herokuapp.com/https://na1.api.riotgames.com/lol/league/v4/entries/by-summoner/${response.id}?api_key=RGAPI-6b44e200-9831-4e0d-969d-833d6a11ba8b`;
       $.ajax({
         url: stats,
         method: "GET"
@@ -37,7 +37,7 @@ $("#bubbleButton").click(function(){
 
 function makeChart(){
 var ctx = document.getElementById('bubbleChart').getContext('2d');
-var chart = new Chart(ctx, {
+var myChart = new Chart(ctx, {
     type: 'bubble',
     data: {
       datasets: [

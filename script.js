@@ -6,6 +6,7 @@ $(".navbar-item").on("click", function () {
   location.href = href;
 });
 var userInput = ``;
+
 $("#search").on("click", setInput);
 function setInput() {
   userInput = $("#summText").val().trim();
