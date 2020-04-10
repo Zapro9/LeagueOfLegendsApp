@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>League Stats</title>
+		<link rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.0/css/bulma.min.css">
+		<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+		<link rel="stylesheet" href="bubble.css">
+		<style>
+
+.hero {
+	background: black url(https://images.unsplash.com/photo-1533201357341-8d79b10dd0f0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2734&q=80) center / cover;
+}
+
+@media (max-width: 1024px) { .hero { background: black url(https://images.unsplash.com/photo-1533201357341-8d79b10dd0f0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2734&q=80) center / cover; } }
+@media (max-width:  768px) { .hero { background: black url(https://images.unsplash.com/photo-1533201357341-8d79b10dd0f0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2734&q=80) center / cover; } }
+
+		</style>
+	</head>
+    <body>
+<!-- .hero -->
+<section class="hero is-fullheight">
+
+
+	<nav class="hero-head">
+		<div class="columns is-mobile is-marginless heading has-text-weight-bold">
+			<div class="column left">
+				<figure class="navbar-item image">
+					<img src="https://vignette.wikia.nocookie.net/logopedia/images/8/86/League_of_legends_logo_transparent.png/revision/latest?cb=20170311194823" style="width: 5rem; height: 8rem;">
+				</figure>
+			</div>
+			<div class="column center desktop">
+				<p class="navbar-item has-text-white" data-href="index.html">HOME PAGE</p>
+				<p class="navbar-item has-text-white" data-href="Leaderboards.html">LEADERBOARDS</p>
+				<p class="navbar-item has-text-white" data-href="Champions.html">CHAMPIONS</p>
+				<p class="navbar-item has-text-white" data-href="Summoners.html">SUMMONERS</p>
+				<p class="navbar-item has-text-white" data-href="ProMatches.html">PRO MATCHES</p>
+				<p class="navbar-item has-text-white" data-href="bubble.html">WIN LOSS COMPARISON</p>
+			</div>
+			<div class="column right">
+				<p class="navbar-item has-text-white desktop" data-href="Shop.html">SHOP   </p>
+				<p class="navbar-item has-text-white desktop" data-href="index.html">SIGN IN</p>
+				<!-- <figure class="navbar-item image has-text-white center"> -->
+					<div id="burger">
+	
+						<p class="fas fa-bars" id="burger" style="width: 1rem; height: 1rem; color: white;"></p>
+					</div>
+						<!-- </figure> -->
+			</div>
+		</div>
+		<!-- /.hero-head -->
+		<div class="ul-container">
+			<ul>
+				<a href="index.html"><li>HOME PAGE</li></a>
+				<a href="Leaderboards.html"><li>LEADERBOARDS</li></a>
+				<a href="Champions.html"><li>CHAMPIONS</li></a>
+				<a href="Summoners.html"><li>SUMMONERS</li></a>
+				<a href="ProMatches.html"><li>PRO MATCHES</li></a>
+				<a href="bubble.html"><li>WIN LOSS COMPARISON</li></a>
+				<a href="Shop.html"><li>SHOP</li></a>
+				<a href="SignIn.html"><li>SIGN IN</li></a>
+			</ul>
+		</div>
+	</nav>
+<header class="hero-body">
+        <div class="is-overlay has-text-centered single-spaced" style="top: 80px;">
+            <h1 class="subtitle is-4 has-text-weight-light has-text-black">League of Legends</h1>
+            <h2 class="title is-1 has-text-black">TEAM STATS</h2>
+        </div>
+
+        <div class="field" style="top: -100px">
+            <label class="label" style="color:white">Enter Chat Log of Player Names</label>
+            <div class="control">
+			  <textarea id="summText" class="textarea" placeholder=
+				"12345 joined the lobby 
+				6789 joined the lobby 
+				abcd joined the lobby
+				efgh joined the lobby
+				ijklm joined the lobby"></textarea>
+            </div>
+        <p class="control">
+          <a id="bubbleButton" class="button is-info">
+              Compare Team Members
+          </a>
+        </p>
+    <div>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+        <canvas id="bubbleChart" width="400"height="200"></canvas>
+    </div>
+</header>
+<!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js"integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="crossorigin="anonymous"></script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="script.js"></script>
+</section>
+</body>
+</html>
