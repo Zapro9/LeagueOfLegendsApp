@@ -117,6 +117,7 @@ a:hover {
   margin: 50px;
 }
 .playerStats {
+  display: none;
   width: 23%;
   float: left;
   padding: 30px;
