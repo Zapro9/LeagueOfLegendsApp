@@ -5,6 +5,10 @@ $(".navbar-item").on("click", function () {
   var href = $(this).attr("data-href");
   location.href = href;
 });
+$("#search").on("click", function () {
+  var searchResults = $(".playerStats").css("display", "block");
+  console.log($(".playerStats"), "hello");
+});
 var userInput = ``;
 
 $("#search").on("click", setInput);
@@ -17,10 +21,10 @@ function setInput() {
   var count = 0;
   for (i = 0; i < sumNames.length; i++) {
     $.ajax({
-      url: `http://cors-anywhere.herokuapp.com/https://na1.api.riotgames.com/lol/summoner/v4/summoners/by-name/${sumNames[i]}?api_key=RGAPI-6b44e200-9831-4e0d-969d-833d6a11ba8b`,
+      url: `http://cors-anywhere.herokuapp.com/https://na1.api.riotgames.com/lol/summoner/v4/summoners/by-name/${sumNames[i]}?api_key=RGAPI-6620c470-48e8-4eca-99bc-91435755a984`,
       method: "GET",
     }).then(function (response) {
-      var stats = `http://cors-anywhere.herokuapp.com/https://na1.api.riotgames.com/lol/league/v4/entries/by-summoner/${response.id}?api_key=RGAPI-6b44e200-9831-4e0d-969d-833d6a11ba8b`;
+      var stats = `http://cors-anywhere.herokuapp.com/https://na1.api.riotgames.com/lol/league/v4/entries/by-summoner/${response.id}?api_key=RGAPI-6620c470-48e8-4eca-99bc-91435755a984`;
       $.ajax({
         url: stats,
         method: "GET",
