@@ -7,7 +7,6 @@ $(".navbar-item").on("click", function () {
 });
 $("#search").on("click", function () {
   var searchResults = $(".playerStats").css("display", "block");
-  console.log($(".playerStats"), "hello");
 });
 var userInput = ``;
 $("#search").on("click", setInput);
